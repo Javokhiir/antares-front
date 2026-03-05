@@ -1,7 +1,14 @@
 ---
 deployment:
   tasks:
+    # DEPLOYPATH – sayt fayllari joylashadigan papka
     - export DEPLOYPATH=/home/aninuz/public_html/
+    
+    # Alohida fayllar
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
+    
+    # Butun papkalarni ko'chirish
     - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
